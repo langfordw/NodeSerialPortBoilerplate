@@ -55,6 +55,8 @@ $(function() {
 
     socket.on("dataIn", function(data){//oncoming serial data
         console.log("data: " + data);
+        $("#dataDisplay").html(data);
+        dataStream.append(new Date().getTime(), data);
     });
 
 });
